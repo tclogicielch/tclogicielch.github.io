@@ -1,0 +1,95 @@
+.b-form {
+  &__label {
+    color: #000;
+    .OpenSansSemiBold();
+    font-size: 14pt;
+    word-spacing: normal;
+    &-necessarily {
+      color: #9e2403;
+    }
+  }
+  &__text {
+    font-size: 17px;
+    word-spacing: normal;
+    line-height: 33px;
+    background: #e8e8e8;
+    border: 1px solid transparent;
+    text-indent: 10px;
+    .rounded(6px);
+    width: 100%;
+    margin: 1px 0 11px 0;
+    .animated-css3(.6s);
+    color: #000;
+    .OpenSansLight();
+    &:focus {
+      border: 1px solid #000000;
+    }
+    &.inp {
+      height: 33px;
+    }
+    &.area {
+      height: 108px;
+      resize: none;
+      outline: none;
+    }
+  }
+  &__submit {
+    height: 38px;
+    line-height: 38px;
+    width: 178px;
+    text-align: center;
+    background: #474747;
+    .OpenSansSemiBold();
+    font-size: 13pt;
+    color: #fff;
+    .rounded(6px);
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  &__submit-container {
+    width: 100%;
+    clear: both;
+    text-align: center;
+    padding: 51px 0 83px;
+    margin: 13px 0;
+  }
+  &__checkbox {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 4px;
+  }
+  &__checkbox-container {
+    position: relative;
+    padding: 0 0 0 30px;
+    word-spacing: normal;
+    margin: 13px 0;
+  }
+  &__checkbox-label {
+    position: relative;
+    word-spacing: normal;
+    margin: 0;
+    .OpenSansLight();
+    font-size: 18px;
+  }
+}
+/*Кастом чекбоксики*/
+.b-form__checkbox + .b-form__checkbox-label:before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  background: url("blocks/b-form/checkbox-off.png") center center no-repeat;
+  .animated-css3(0.3s);
+}
+.b-form__checkbox:checked + .b-form__checkbox-label:before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  background: url("blocks/b-form/checkbox-on.png") center center no-repeat;
+}
